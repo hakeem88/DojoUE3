@@ -6,18 +6,84 @@
         xmlns:local="clr-namespace:DojoUE3"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="800">
-    <Grid>
+    <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="28*"/>
             <RowDefinition Height="541*"/>
         </Grid.RowDefinitions>
 
         <TabControl x:Name="tbcTabs" Grid.Column="0" Grid.Row="0" Margin="1">
-            <TabItem x:Name="tabStud" Header="Studierende"></TabItem>
-            <TabItem x:Name="tabStam" Header="Stammdaten"></TabItem>
+            <TabItem x:Name="tabStud" Header="Studierende">
+
+                <Grid Grid.Column="0" Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="288*"/>
+                        <RowDefinition Height="253*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="107*"/>
+                        <ColumnDefinition Width="289*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0" Grid.Row="0" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="47*"/>
+                            <ColumnDefinition Width="60*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="7*"/>
+                            <RowDefinition Height="7*"/>
+                            <RowDefinition Height="7*"/>
+                            <RowDefinition Height="7*"/>
+                            <RowDefinition Height="7*"/>
+
+                        </Grid.RowDefinitions>
+
+
+                        <Label Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Vorname"></Label>
+                        <TextBox Grid.Column="1" Grid.Row="0" Margin="5" Height="30"></TextBox>
+
+                        <Label Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Nachname"></Label>
+                        <TextBox Grid.Column="1" Grid.Row="1" Margin="5" Height="30"></TextBox>
+
+
+                        <Label Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Alter" ></Label>
+                        <TextBox Grid.Column="1" Grid.Row="2" Margin="5" Height="30"></TextBox>
+
+                        <Label Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Studiengang"></Label>
+                        <ComboBox Grid.Column="1" Grid.Row="3" Margin="5" Height="23"></ComboBox>
+
+                        <Label Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Beitrag bez."></Label>
+                        <CheckBox Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"></CheckBox>
+
+
+                    </Grid>
+
+                    <Grid Grid.Column="0" Grid.Row="1">
+                        <Button Margin="15" Content="Speichern" VerticalAlignment="Top" ></Button>
+                    </Grid>
+
+
+                    <Grid Grid.Column="1" Grid.Row="0" Grid.RowSpan="2">
+                        <DataGrid Margin="10">
+
+
+                        </DataGrid>
+                    </Grid>
+
+                </Grid>
+
+            </TabItem>
+            
+            <TabItem x:Name="tabStam" Header="Stammdaten">
+                
+                
+            </TabItem>
+            
         </TabControl>
 
-        
-        
+       
+
+
     </Grid>
 </Window>
