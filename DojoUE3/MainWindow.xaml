@@ -43,31 +43,31 @@
 
 
                         <Label Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Vorname"></Label>
-                        <TextBox Grid.Column="1" Grid.Row="0" Margin="5" Height="30"></TextBox>
+                        <TextBox x:Name="tboVor" Grid.Column="1" Grid.Row="0" Margin="5" Height="30"></TextBox>
 
                         <Label Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Nachname"></Label>
-                        <TextBox Grid.Column="1" Grid.Row="1" Margin="5" Height="30"></TextBox>
+                        <TextBox x:Name="tboNach" Grid.Column="1" Grid.Row="1" Margin="5" Height="30"></TextBox>
 
 
                         <Label Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Alter" ></Label>
-                        <TextBox Grid.Column="1" Grid.Row="2" Margin="5" Height="30"></TextBox>
+                        <TextBox x:Name="tboAlt" Grid.Column="1" Grid.Row="2" Margin="5" Height="30"></TextBox>
 
                         <Label Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Studiengang"></Label>
-                        <ComboBox Grid.Column="1" Grid.Row="3" Margin="5" Height="23"></ComboBox>
+                        <ComboBox x:Name="cboStu" Grid.Column="1" Grid.Row="3" Margin="5" Height="23"></ComboBox>
 
                         <Label Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Beitrag bez."></Label>
-                        <CheckBox Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"></CheckBox>
+                        <CheckBox x:Name="cboBez" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"></CheckBox>
 
 
                     </Grid>
 
                     <Grid Grid.Column="0" Grid.Row="1">
-                        <Button Margin="15" Content="Speichern" VerticalAlignment="Top" ></Button>
+                        <Button x:Name="btoSpe1" Margin="15" Content="Speichern" VerticalAlignment="Top" ></Button>
                     </Grid>
 
 
                     <Grid Grid.Column="1" Grid.Row="0" Grid.RowSpan="2">
-                        <DataGrid Margin="10">
+                        <DataGrid x:Name="dgrStu1" Margin="10">
 
 
                         </DataGrid>
@@ -98,12 +98,12 @@
                         <RowDefinition Height="50*"></RowDefinition>
                     </Grid.RowDefinitions>
 
-                    <TextBox Margin="11"></TextBox>
+                    <TextBox x:Name="tboStu" Margin="11"></TextBox>
 
-                    <Button Grid.Row="1" Height="30" Margin="15" Width="100" VerticalAlignment="Top" Content="Speichern"></Button>
+                    <Button x:Name="btoSpe2" Grid.Row="1" Height="30" Margin="15" Width="100" VerticalAlignment="Top" Content="Speichern"></Button>
                 </Grid>
 
-                <DataGrid Grid.Column="1" Margin="10"></DataGrid>
+                <DataGrid x:Name="dgrStu2" Grid.Column="1" Margin="10"></DataGrid>
                 
             </Grid>
             
