@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DojoUE3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="600" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="541*"/>
+        </Grid.RowDefinitions>
+
+        <TabControl x:Name="tbcTabs" Grid.Column="0" Grid.Row="0" Margin="1">
+            <TabItem x:Name="tabStud" Header="Studierende"></TabItem>
+            <TabItem x:Name="tabStam" Header="Stammdaten"></TabItem>
+        </TabControl>
+
+        
         
     </Grid>
 </Window>
