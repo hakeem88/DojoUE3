@@ -6,14 +6,16 @@
         xmlns:local="clr-namespace:DojoUE3"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="800">
-    <Grid ShowGridLines="True">
+    <TabControl x:Name="tbcTabs" Grid.Column="0" Grid.Row="0" Margin="1">
+        <TabItem x:Name="tabStud" Header="Studierende">
+
+            <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="28*"/>
             <RowDefinition Height="541*"/>
         </Grid.RowDefinitions>
 
-        <TabControl x:Name="tbcTabs" Grid.Column="0" Grid.Row="0" Margin="1">
-            <TabItem x:Name="tabStud" Header="Studierende">
+       
 
                 <Grid Grid.Column="0" Grid.Row="1">
                     <Grid.RowDefinitions>
@@ -73,17 +75,39 @@
 
                 </Grid>
 
-            </TabItem>
-            
-            <TabItem x:Name="tabStam" Header="Stammdaten">
-                
-                
-            </TabItem>
-            
-        </TabControl>
+ 
 
        
 
 
     </Grid>
+
+        </TabItem>
+
+        <TabItem x:Name="tabStam" Header="Stammdaten">
+
+            <Grid ShowGridLines="True">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"></ColumnDefinition>
+                    <ColumnDefinition Width="600"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="50*"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <TextBox Margin="11"></TextBox>
+
+                    <Button Grid.Row="1" Height="30" Margin="15" Width="100" VerticalAlignment="Top" Content="Speichern"></Button>
+                </Grid>
+
+                <DataGrid Grid.Column="1" Margin="10"></DataGrid>
+                
+            </Grid>
+            
+        </TabItem>
+
+    </TabControl>
 </Window>
